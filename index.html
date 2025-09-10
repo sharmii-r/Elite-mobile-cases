@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Mobiles - Chennai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Popup Styling */
+    #specialOfferPopup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    #specialOfferPopup .popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 350px;
+      text-align: center;
+      position: relative;
+    }
+    #specialOfferPopup img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #444;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-6 text-center text-2xl font-bold shadow-md">
+    Elite Mobiles - Chennai
+  </header>
+
+  <!-- Products Grid -->
+  <main class="p-8">
+    <h1 class="text-3xl font-bold text-center mb-10 text-gray-800">Our Mobile Covers</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      <!-- Product 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://www.themessycorner.in/cdn/shop/files/Blossom_Mock_700x.png?v=1718000390" alt="Blossom Case" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Blossom Cover</h2>
+          <p class="text-blue-600 font-bold">₹299</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://sparkup.in/cdn/shop/files/Panda_With_BamBoo_Silicon_Phone_Cases_Pink_1.jpg?v=1750157428&width=800" alt="Panda Cover" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Panda Bamboo Case</h2>
+          <p class="text-blue-600 font-bold">₹349</p>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://www.thecasecompany.in/cdn/shop/files/17_3ee19aa8-5451-43ae-9168-e2407207c223_1080x.webp?v=1725962988" alt="Pattern Case" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Pattern Case</h2>
+          <p class="text-blue-600 font-bold">₹399</p>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTvKzQ23gA0NTAWNKMOkUxN9ovetkCZIeEzR-uLvR-5i2kaUVVwUXOahMH49h1gnxmrLquWvJeZROr11TJzGqRY127D4IyYHtUq7arTl2Hp" alt="Case 4" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Elegant Case</h2>
+          <p class="text-blue-600 font-bold">₹449</p>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT7PCZ9jK060A1I_HgGxpl1lcEO-YhZ_PmRqCxqLVTfDkG3K6lXKq8vtdG1TScG2p7Eoa77-dSE37_H-APEWiPCVjkHxU_47LHZvSIi84zbtjCpAe1c_MFzhg" alt="Case 5" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Floral Cover</h2>
+          <p class="text-blue-600 font-bold">₹499</p>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRrOnS-Ycc88FYKJ_fOia-nrHs9SBldVhrHSQ_mIlfvvztABeXqlPTZHoEQ4G-Cejxn42jKprFruKKlGN1J_NjqXFlrScxgVQO2bR0J_oYk" alt="Case 6" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Silicon Cover</h2>
+          <p class="text-blue-600 font-bold">₹399</p>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQxD48JmFytA1QiEP6NWLCQaWiD8R11WozkRohZphMSTiCD_vDjfmr9X_Y36BFghA1LyMGx-IuxKKOuul1c71l6ksgsOd9kElpo5n_7XqeZvr0z8DLIGl1D" alt="Case 7" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Marble Case</h2>
+          <p class="text-blue-600 font-bold">₹549</p>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT44qUo7cOlkie_0kd-nOUtx04CtzqzB_go4gMs2pQn4C4agJOBSH_YCnoV2JyQv89Aw91RpU3i8VE6BF1KsMdwym2UAQGL5jjeT7bTRePAujrNCLcgvaBJNg" alt="Case 8" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Luxury Case</h2>
+          <p class="text-blue-600 font-bold">₹599</p>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcToNrozh2_bliaX3-d42rr7INCaXwmQpcVE8Bb0Ap6e9XXPF6I_gLjDrTNKR20ZS6zX2MczlA3zUSyHyysBzk76GtEhRm_eUDyvxf1laFquZPM5MTYhZx0_Sww" alt="Case 9" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Designer Case</h2>
+          <p class="text-blue-600 font-bold">₹449</p>
+        </div>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQGOiA0UBmXG-nA0INl3htb0M1QJu9d3mx7go3Omum2frDY-0n9tHFVzKy4j3cWYypzlKzZSsjGJzz2AOkWpS35RdQZ-vHK1i4skogq5NxN" alt="Case 10" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Premium Case</h2>
+          <p class="text-blue-600 font-bold">₹499</p>
+        </div>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSGKA_NFKjstOQLi8q4IuDpvC_A64sA10cd_1P_yRtDrMBt57t5xcFTsY4DrgXi_dbjPGs1GDsF9WU8AlXiHhbhgyvSLD2qi8GwnCv_uLd3fzuFAB3AIzh6xA" alt="Case 11" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Bold Cover</h2>
+          <p class="text-blue-600 font-bold">₹399</p>
+        </div>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS7Ipni_cBKJY8nmcXoV2HzavR50WagVzDlzNNF9vWIMSY2kpcQP12X2i-anjMTGPX3UHb0W_K5Kw1OuB8-JMEQswL6-1Eg-bJue0wBRQ" alt="Case 12" class="w-full h-72 object-cover">
+        <div class="p-4 text-center">
+          <h2 class="font-semibold text-lg">Trendy Cover</h2>
+          <p class="text-blue-600 font-bold">₹449</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Special Offer Popup -->
+<div id="specialOfferPopup" class="flex">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSmeRIsb85E9hksYk_A8HYC3zCFKNExiG798IAOUZt6FdnqIVRkxFdXefJRsp-y62fetzcyY1CZBpvcOIdhI7yGmxbkI-a-0NEsj32gcLXr" alt="Special Offer Cover">
+    <h2 class="font-bold text-xl mb-2">Special Edition Cover</h2>
+    <p class="text-blue-600 font-bold mb-4">₹599</p>
+    <a href="special.html" class="bg-blue-600 text-white px-4 py-2 rounded">View Offer</a>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+    © 2025 Elite Mobiles, Chennai. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Show popup after 3 seconds
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById('specialOfferPopup').style.display = 'flex';
+      }, 3000);
+    }
+
+    function closePopup() {
+      document.getElementById('specialOfferPopup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
